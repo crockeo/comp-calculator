@@ -1,0 +1,45 @@
+jobs:
+  - name: someplace
+    taxable_income:
+      - name: cash
+        cash_value: 85000.00
+    pretax_expense:
+      - name: healthcare
+        amount: 1325.48
+      - name: 401k
+        amount: 11000.00
+  - name: tech_job
+    taxable_income:
+      - name: cash
+        cash_value: 120000.00
+      - name: options
+        total: 100000
+        years: 4
+        strike_price: 0.12
+        last_preferred_price: 0.89
+    pretax_expense:
+      - name: healthcare
+        amount: 1325.48
+      - name: 401k
+        amount: 22500.00
+tax_brackets:
+  - min: 0
+    max: 11000
+    rate: 0
+  - min: 11000
+    max: 44725
+    rate: 0.12
+  - min: 44725
+    max: 95375
+    rate: 0.22
+  - min: 95375
+    max: 182100
+    rate: 0.24
+  - min: 182100
+    max: 231250
+    rate: 0.32
+  - min: 231250
+    max: 578125
+    rate: 0.35
+  - min: 578125
+    rate: 0.37
